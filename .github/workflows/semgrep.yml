@@ -12,4 +12,7 @@ jobs:
         id: semgrep
         uses: returntocorp/semgrep-action@v1
         with:
-          config: p/r2c
+          #config: p/r2c
+          config: p/phpcs-security-audit
+
+
