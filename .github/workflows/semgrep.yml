@@ -1,0 +1,15 @@
+name: Semgrep
+on: 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  semgrep:
+    runs-on: ubuntu-latest
+    name: Check
+    steps:
+      - uses: actions/checkout@v1
+      - name: Semgrep
+        id: semgrep
+        uses: returntocorp/semgrep-action@v1
+        with:
+          config: p/r2c
